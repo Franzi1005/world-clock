@@ -1,0 +1,39 @@
+body {
+  background: linear-gradient(
+    108.1deg,
+    rgb(167, 220, 225) 11.2%,
+    rgb(217, 239, 242) 88.9%
+  );
+}
+
+h1 {
+  text-align: center;
+}
+
+select {
+  margin: 16px 20px 20px 20px;
+}
+
+footer {
+  text-align: center;
+  margin: 16px;
+}
+
+.everything {
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: block;
+  max-width: 60%;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: -1px 2px 6px 5px rgba(0, 0, 0, 0.1);
+}
+
+.time {
+  text-align: right;
+}
+
+.city-row {
+  margin-top: 15px;
+}
