@@ -9,11 +9,13 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone-with-data-1970-2030.js"></script>
     <title>Franzi's World-Clock</title>
   </head>
   <body>
     <div class="everything">
-      <h1>Franzi's World-Clock</h1>
+      <h1>Franzi's World-Clock 🕰️</h1>
 
       <select name="" id="cities">
         <option value="">Search City..</option>
@@ -27,40 +29,40 @@
         <div class="row city-row">
           <div class="col-6">
             <h2>Los Angeles 🏈</h2>
-            <p>August 15h, 2022</p>
+            <p id="los-angeles-date"></p>
           </div>
           <div class="col-6 time">
-            <h2>01:48:14 <span>AM</span></h2>
+            <h2 id="los-angeles-time"></h2>
           </div>
         </div>
         <hr />
         <div class="row city-row">
           <div class="col-6">
             <h2>Sydney 🦘</h2>
-            <p>August 15h, 2022</p>
+            <p id="sydney-date"></p>
           </div>
           <div class="col-6 time">
-            <h2>01:48:14 <span>AM</span></h2>
+            <h2 id="sydney-time"></h2>
           </div>
         </div>
         <hr />
         <div class="row city-row">
           <div class="col-6">
             <h2>Tokyo 🏯</h2>
-            <p>August 15h, 2022</p>
+            <p id="tokyo-date"></p>
           </div>
           <div class="col-6 time">
-            <h2>01:48:14 <span>AM</span></h2>
+            <h2 id="tokyo-time"></h2>
           </div>
         </div>
         <hr />
         <div class="row city-row">
           <div class="col-6">
             <h2>Paris 🥐</h2>
-            <p>August 15h, 2022</p>
+            <p id="paris-date"></p>
           </div>
           <div class="col-6 time">
-            <h2>01:48:14 <span>AM</span></h2>
+            <h2 id="paris-time"></h2>
           </div>
         </div>
       </div>
