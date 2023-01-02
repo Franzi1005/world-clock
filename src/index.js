@@ -84,6 +84,7 @@ function displayTimeAndCity(event) {
           <div class="col-6 time">
             <h2>${limaTime}</h2>
           </div>
+          <a href="/"> Back to home<a>
         </div>`;
   }
   if (event.target.value === "new york") {
@@ -95,6 +96,7 @@ function displayTimeAndCity(event) {
           <div class="col-6 time">
             <h2>${newYorkTime}</h2>
           </div>
+          <a href="/"> Back to home<a>
         </div>`;
   }
   if (event.target.value === "hamburg") {
@@ -106,6 +108,7 @@ function displayTimeAndCity(event) {
           <div class="col-6 time">
             <h2 id=>${hamburgTime}</h2>
           </div>
+          <a href="/"> Back to home<a>
         </div>`;
   }
   if (event.target.value === "new delhi") {
@@ -117,6 +120,7 @@ function displayTimeAndCity(event) {
           <div class="col-6 time">
             <h2 id=>${newDelhiTime}</h2>
           </div>
+          <a href="/"> Back to home<a>
         </div>`;
   }
   if (event.target.value === "london") {
@@ -128,6 +132,7 @@ function displayTimeAndCity(event) {
           <div class="col-6 time">
             <h2 id=>${londonTime}</h2>
           </div>
+          <a href="/"> Back to home<a>
         </div>`;
   }
 
@@ -140,6 +145,7 @@ function displayTimeAndCity(event) {
           <div class="col-6 time">
             <h2 id=>${currentTime}</h2>
           </div>
+          <a href="/"> Back to home<a>
         </div>`;
   }
 }
