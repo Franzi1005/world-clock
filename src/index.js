@@ -4,44 +4,55 @@ function updatetime() {
   let losAngelesDateElement = document.querySelector("#los-angeles-date");
   let losAngelesTimeElement = document.querySelector("#los-angeles-time");
 
-  losAngelesDateElement.innerHTML = moment()
-    .tz("America/Los_Angeles")
-    .format("MMMM Do, YYYY");
+  if (losAngelesDateElement) {
+    losAngelesDateElement.innerHTML = moment()
+      .tz("America/Los_Angeles")
+      .format("MMMM Do, YYYY");
+  }
 
-  losAngelesTimeElement.innerHTML = moment()
-    .tz("America/Los_Angeles")
-    .format("HH:mm:ss A");
+  if (losAngelesTimeElement) {
+    losAngelesTimeElement.innerHTML = moment()
+      .tz("America/Los_Angeles")
+      .format("HH:mm:ss A");
+  }
 
   let sydneyDateElement = document.querySelector("#sydney-date");
   let sydneyTimeElement = document.querySelector("#sydney-time");
 
-  sydneyDateElement.innerHTML = moment()
-    .tz("Australia/Sydney")
-    .format("MMMM Do, YYYY");
-
-  sydneyTimeElement.innerHTML = moment()
-    .tz("Australia/Sydney")
-    .format("HH:mm:ss A");
+  if (sydneyDateElement) {
+    sydneyDateElement.innerHTML = moment()
+      .tz("Australia/Sydney")
+      .format("MMMM Do, YYYY");
+  }
+  if (sydneyTimeElement) {
+    sydneyTimeElement.innerHTML = moment()
+      .tz("Australia/Sydney")
+      .format("HH:mm:ss A");
+  }
 
   let tokyoDateElement = document.querySelector("#tokyo-date");
   let tokyoTimeElement = document.querySelector("#tokyo-time");
-
-  tokyoDateElement.innerHTML = moment()
-    .tz("Asia/Tokyo")
-    .format("MMMM Do, YYYY");
-
-  tokyoTimeElement.innerHTML = moment().tz("Asia/Tokyo").format("HH:mm:ss A");
+  if (tokyoDateElement) {
+    tokyoDateElement.innerHTML = moment()
+      .tz("Asia/Tokyo")
+      .format("MMMM Do, YYYY");
+  }
+  if (tokyoTimeElement) {
+    tokyoTimeElement.innerHTML = moment().tz("Asia/Tokyo").format("HH:mm:ss A");
+  }
 
   let parisDateElement = document.querySelector("#paris-date");
   let parisTimeElement = document.querySelector("#paris-time");
-
-  parisDateElement.innerHTML = moment()
-    .tz("Europe/Paris")
-    .format("MMMM Do, YYYY");
-
-  parisTimeElement.innerHTML = moment().tz("Europe/Paris").format("HH:mm:ss A");
-
-  limaTime = moment().tz("America/Lima").format("HH:mm:ss A");
+  if (parisDateElement) {
+    parisDateElement.innerHTML = moment()
+      .tz("Europe/Paris")
+      .format("MMMM Do, YYYY");
+  }
+  if (parisTimeElement) {
+    parisTimeElement.innerHTML = moment()
+      .tz("Europe/Paris")
+      .format("HH:mm:ss A");
+  }
 }
 
 setInterval(updatetime, 1000);
@@ -57,6 +68,13 @@ function displayTimeAndCity(event) {
   let newDelhiTime = moment().tz("Asia/Colombo").format("HH:mm:ss A");
   let londonDate = moment().tz("Europe/London").format("MMMM Do, YYYY");
   let londonTime = moment().tz("Europe/London").format("HH:mm:ss A");
+
+  let currentTimeZone = moment.tz.guess();
+  console.log(currentTimeZone);
+
+  let currentDate = moment().tz(currentTimeZone).format("MMMM Do, YYYY");
+  let currentTime = moment().tz(currentTimeZone).format("HH:mm:ss A");
+
   if (event.target.value === "lima") {
     citiesElement.innerHTML = `<div class="row city-row">
           <div class="col-6">
@@ -109,6 +127,18 @@ function displayTimeAndCity(event) {
           </div>
           <div class="col-6 time">
             <h2 id=>${londonTime}</h2>
+          </div>
+        </div>`;
+  }
+
+  if (event.target.value === "current") {
+    citiesElement.innerHTML = `<div class="row city-row">
+          <div class="col-6">
+            <h2>${currentTimeZone}</h2>
+            <p id=>${currentDate}</p>
+          </div>
+          <div class="col-6 time">
+            <h2 id=>${currentTime}</h2>
           </div>
         </div>`;
   }
